@@ -1,0 +1,76 @@
+###
+POST http://localhost:8077/api/payment
+Content-Type: application/json
+
+{
+  "phoneNumber": "904322280",
+  "amount": 2000000,
+  "type": "CLICK"
+}
+
+
+###
+###
+POST http://localhost:8077/api/simCard
+Content-Type: application/json
+
+{
+  "passportID": "fwfwfww222",
+  "passportNumber": "AB2343443A",
+  "code": "90",
+  "number": "4322280"
+}
+
+###
+
+POST http://localhost:8077/api/tariff
+Content-Type: application/json
+
+{
+  "name": "Bir yil",
+  "userType": "PHYSICAL_USER",
+  "price": 50000,
+  "switchPrice": 2500,
+  "expire": 30,
+  "tariffSMS": 1000,
+  "tariffMB": 1000,
+  "tariffDAQ": 1000,
+  "smsPrice": 40,
+  "mbPrice": 80,
+  "daqPrice": 40
+}
+###
+POST http://localhost:8077/api/simCard/5d746f7d-d4f1-426b-af5f-09084b895714?tariffId=2
+###
+POST http://localhost:8077/api/packet
+Content-Type: application/json
+
+{
+  "type": "SMS",
+  "amount": 100000,
+  "price": 8000.52,
+  "name": "Super 110",
+  "dueDate": 7,
+  "tariffList": [1]
+
+}
+
+###
+POST http://localhost:80/api/details/7030c23c-f851-412c-8eba-a3a5410bd63c
+Content-Type: application/json
+
+{
+  "amount": 50,
+  "action": "MB"
+}
+
+
+
+###
+GET http://localhost:80/api/ussd/f69d999c-15f3-4878-a885-437c7ca3381a?code=*102#
+
+
+###
+GET http://localhost:80/api/details/7030c23c-f851-412c-8eba-a3a5410bd63c?from=2021-10-08 09:00&to=2021-10-29 12:00
+
+###
